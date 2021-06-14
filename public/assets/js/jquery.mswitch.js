@@ -32,11 +32,11 @@
 	
 	$.mSwitch = function(_this, params) {
 		if ($(_this) && $(_this).is(":checkbox")){
-			$(_this).addclassName("m_switch_check");
+			$(_this).addclass("m_switch_check");
 			var element_parent = $(_this).parent();
 			var element = $(_this).detach().html();
-			var $div = $("<div/>").attr("className", "m_switch");
-			var $b = $("<b/>").attr("className", "m_switch_b m_switch_element");				
+			var $div = $("<div/>").attr("class", "m_switch");
+			var $b = $("<b/>").attr("class", "m_switch_b m_switch_element");				
 			$b.appendTo($div);
 			$(_this).detach().prependTo($div);
 			element_parent.append($div);
@@ -69,34 +69,34 @@
 	
 	$.mSwitch.turnOn = function(elem){
 		if (elem.parent(".m_switch").length > 0){
-			if (!elem.parent(".m_switch").hasclassName("m_switch_color")){
-				elem.parent(".m_switch").addclassName("m_switch_color");
+			if (!elem.parent(".m_switch").hasclass("m_switch_color")){
+				elem.parent(".m_switch").addclass("m_switch_color");
 			}
 		}
 		if (elem.next("b.m_switch_b").length > 0){
-			if (!elem.next("b.m_switch_b").hasclassName("m_switch_checked")){
-				elem.next("b.m_switch_b").addclassName("m_switch_checked");
+			if (!elem.next("b.m_switch_b").hasclass("m_switch_checked")){
+				elem.next("b.m_switch_b").addclass("m_switch_checked");
 			}
 		}
-		if (elem.parent(".m_switch").hasclassName("m_switch_color") &&
-				elem.next("b.m_switch_b").hasclassName("m_switch_checked")){
+		if (elem.parent(".m_switch").hasclass("m_switch_color") &&
+				elem.next("b.m_switch_b").hasclass("m_switch_checked")){
 				elem.attr('checked', true);
 		}
 	}
 	
 	$.mSwitch.turnOff = function(elem){
 		if (elem.parent(".m_switch").length > 0){
-			if (elem.parent(".m_switch").hasclassName("m_switch_color")){
-				elem.parent(".m_switch").removeclassName("m_switch_color");
+			if (elem.parent(".m_switch").hasclass("m_switch_color")){
+				elem.parent(".m_switch").removeclass("m_switch_color");
 			}
 		}
 		if (elem.next("b.m_switch_b").length > 0){
-			if (elem.next("b.m_switch_b").hasclassName("m_switch_checked")){
-				elem.next("b.m_switch_b").removeclassName("m_switch_checked");
+			if (elem.next("b.m_switch_b").hasclass("m_switch_checked")){
+				elem.next("b.m_switch_b").removeclass("m_switch_checked");
 			}
 		}
-		if (!elem.parent(".m_switch").hasclassName("m_switch_color") &&
-				!elem.next("b.m_switch_b").hasclassName("m_switch_checked")){
+		if (!elem.parent(".m_switch").hasclass("m_switch_color") &&
+				!elem.next("b.m_switch_b").hasclass("m_switch_checked")){
 				elem.attr('checked', false);
 		}
 	}

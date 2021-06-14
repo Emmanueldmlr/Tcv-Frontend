@@ -33,9 +33,9 @@ class ErrorBoundary extends Component{
                         
                         this.state.hasError ? 
 
-                        <div className="row" style={ {marginTop: "5rem", height:"auto", minHeight:"500px"} }>
+                        <div class="row" style={ {marginTop: "5rem", height:"auto", minHeight:"500px"} }>
                                                         
-                            <p className="col-12 text-center">Something went wrong</p>
+                            <p class="col-12 text-center">Something went wrong</p>
                             
                         </div>
 

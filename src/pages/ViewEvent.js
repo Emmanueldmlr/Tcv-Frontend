@@ -47,14 +47,14 @@ const ViewEvent = () => {
 
                         <EventBanner data={singleEvent} />
 
-                        <section id="et-content" className="container-fluid">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-lg-8">
+                        <section id="et-content" class="container-fluid">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8">
                                     
-                                        <div id="data-description" className="event-description shadow rounded p-5 content-box mt-5">
-                                            <h4 className="mb-4 font-weight-bold">Description</h4>
-                                              <p className="description">{singleEvent.description}</p>
+                                        <div id="data-description" class="event-description shadow rounded p-5 content-box mt-5">
+                                            <h4 class="mb-4 font-weight-bold">Description</h4>
+                                              <p class="description">{singleEvent.description}</p>
                                         </div>
                                     </div>
                                 </div>

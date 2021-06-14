@@ -194,7 +194,7 @@
 	#et-pagehead{
 		min-height: unset;
 	}
-	#et-recent_projects > div[className^="col-"]{
+	#et-recent_projects > div[class^="col-"]{
 		width: 100%;
 	}
 	#et-recent_projects .project_image{

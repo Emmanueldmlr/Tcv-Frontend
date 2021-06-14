@@ -34,24 +34,24 @@ const Index = () => {
 
             <HomeMaster/>
 
-            <section id="et-latest-news" className="container-fluid">
+            <section id="et-latest-news" class="container-fluid">
                 
-                <div className="container">
+                <div class="container">
 
-                    <div className="section-heading">
+                    <div class="section-heading">
 
                         <p>Get Latest events here.</p>
 
                         <br/>
 
-                        <h2 className="mb-0">Latest Events</h2>
+                        <h2 class="mb-0">Latest Events</h2>
 
                     </div>
 
                     {
                         loading ?
 
-                            <div className="row">
+                            <div class="row">
 
                                  {
                                      sampleData.map( data => (
@@ -64,7 +64,7 @@ const Index = () => {
                         :
                         <>
 
-                            <div className="row">
+                            <div class="row">
 
                                 {
                                     latestEvents && latestEvents.length > 0
@@ -82,11 +82,11 @@ const Index = () => {
 
                             </div>
 
-                            <div className="text-center">
+                            <div class="text-center">
                                 
                                 <Link to="/events">
 
-                                      <a href="#" className="btn btn-primary border-0 mt-3"><i className="fas fa-angle-right btn-icon"></i>View All</a>
+                                      <a href="#" class="btn btn-primary border-0 mt-3"><i class="fas fa-angle-right btn-icon"></i>View All</a>
                                 
                                 </Link>
 

@@ -8,11 +8,11 @@ const Header = () => {
 
         <>
 
-            <nav className="et-navbar navbar">
+            <nav class="et-navbar navbar">
 
-                <Link to="/"><a className="logo h6 mb-0 text-decoration-none" href="#">TCV Test</a></Link>
+                <Link to="/"><a class="logo h6 mb-0 text-decoration-none" href="#">TCV Test</a></Link>
 
-                <ul className="nostyle nav-links inline mr-lg-auto text-right text-lg-left flex-lg-grow-1 mb-0">
+                <ul class="nostyle nav-links inline mr-lg-auto text-right text-lg-left flex-lg-grow-1 mb-0">
 
                     <li><Link to="/"><a href="#">Home</a></Link></li>
 
@@ -28,7 +28,7 @@ const Header = () => {
 
             <nav id="et-mobile-nav">
                 
-                <ul className="text-capitalize">
+                <ul class="text-capitalize">
 
                     <li><Link to="/">Home</Link></li>
 

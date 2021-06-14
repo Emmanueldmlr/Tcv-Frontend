@@ -10,31 +10,31 @@ const Card = ({ loading, data}) => {
     
     return (
 
-        <div className="col-md-3 pt-25">
+        <div class="col-md-3 pt-25">
 
-            <div className="blog-grid rounded shadow">
+            <div class="blog-grid rounded shadow">
 
-                <div className="image-wrap position-relative">
+                <div class="image-wrap position-relative">
 
                     {
 
                         loading ? 
 
-                             <Skeleton variant="rect" width={300} height={150} className="img-fluid rounded-top" />
+                             <Skeleton variant="rect" width={300} height={150} class="img-fluid rounded-top" />
                        
                         :
                         <>
 
-                            <span className="badge badge-danger photocount position-absolute">{data.category.title}</span>
+                            <span class="badge badge-danger photocount position-absolute">{data.category.title}</span>
                            
-                            <img src="/assets/img/event-grid-1.jpg" alt="img" className="img-fluid rounded-top"/>
+                            <img src="/assets/img/event-grid-1.jpg" alt="img" class="img-fluid rounded-top"/>
                         
                         </>
 
                     }
                     
                 </div>
-                <div className="content p-4">
+                <div class="content p-4">
 
                     {
                         loading ? 
@@ -48,11 +48,11 @@ const Card = ({ loading, data}) => {
                         </>
                         :
                         <>
-                            <p className="text-muted">Posted on {formatDate(data.createdAt)}</p>
+                            <p class="text-muted">Posted on {formatDate(data.createdAt)}</p>
 
-                            <h4 className="mb-3"><a href="#" className="text-decoration-none text-reset">{trimStrings(17,data.title)}</a></h4>
+                            <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">{trimStrings(17,data.title)}</a></h4>
                             
-                            <p className="description">
+                            <p class="description">
                                 
                                 {
                                     
@@ -62,23 +62,23 @@ const Card = ({ loading, data}) => {
                             
                             </p>
                             
-                            <div className="info">
+                            <div class="info">
                                 
-                                <div className="mb-2"><i className="icon-clock"></i>&nbsp; {formatDate(data.date)}</div>
+                                <div class="mb-2"><i class="fas fa-clock"></i>&nbsp; {formatDate(data.date)}</div>
                                  
-                                 <div className="mb-2"><i className="fas fa-map-marker"></i>&nbsp; {data.address}</div>
+                                 <div class="mb-2"><i class="fas fa-map-marker"></i>&nbsp; {data.address}</div>
                                 
-                                <div className="text-secondary"><i className="fas fa-thumbtack"></i>&nbsp; {data.isVirtual ? "Virtual" : "Physical Meeting"}</div>
+                                <div class="text-secondary"><i class="fas fa-thumbtack"></i>&nbsp; {data.isVirtual ? "Virtual" : "Physical Meeting"}</div>
                             
                             </div>
                             
                             <hr/>
                             
-                            <div className="d-flex align-items-center">
+                            <div class="d-flex align-items-center">
 
                                 <Link to={"/events/"+ data.slug}>
 
-                                     <a href="#" className="text-decoration-none text-primary">View Event</a>
+                                     <a href="#" class="text-decoration-none text-primary">View Event</a>
 
                                 </Link>
                             

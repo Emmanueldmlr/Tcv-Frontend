@@ -14,7 +14,7 @@ $(document).ready(function(){
 	//-------------------------------
 	if ($('#loadmaps').length) {
 		var singleMap   =   false;
-		if($('#loadmaps').hasclassName('single-map')) {
+		if($('#loadmaps').hasclass('single-map')) {
 			singleMap   =   true;
 		}
 		loadMap(singleMap);
@@ -66,7 +66,7 @@ $(document).ready(function(){
 
 		$(event.target.files).each(function(index){
 			var tmppath = URL.createObjectURL(event.target.files[index]);
-			imageHTML += '<div className="image-box no-hover position-relative"><img src="'+tmppath+'" alt="img"><span className="badge badge-primary ml-auto mt-3 pointer border-0 font-weight-normal remove-image position-absolute" data-targetimg="'+ index +'"><i className="fas fa-trash"></i></span></div>';
+			imageHTML += '<div class="image-box no-hover position-relative"><img src="'+tmppath+'" alt="img"><span class="badge badge-primary ml-auto mt-3 pointer border-0 font-weight-normal remove-image position-absolute" data-targetimg="'+ index +'"><i class="fas fa-trash"></i></span></div>';
 		});
 
 		$('.create-gallery').html(imageHTML);
@@ -89,7 +89,7 @@ $(document).ready(function(){
 	//-------------------------------
 	if($(".speakers-list").length) {
 		$("#add_speaker").on("click", function(){
-			$(".speakers-list table tbody").append('<tr><td contenteditable="true">Name</td><td><input className="form-control border" type="text" name="designation" placeholder="e.g Show Stopper"></td><td><div className="position-relative text-center change-speaker-avatar"><input type="file" name="change_image"><img src="img/user-avatar.jpg" className="img-fluid" alt="img"></div></td><td><span className="badge badge-primary ml-3 mt-3 pointer border-0 font-weight-normal position-absolute"><i className="fas fa-trash"></i></span></td></tr>');
+			$(".speakers-list table tbody").append('<tr><td contenteditable="true">Name</td><td><input class="form-control border" type="text" name="designation" placeholder="e.g Show Stopper"></td><td><div class="position-relative text-center change-speaker-avatar"><input type="file" name="change_image"><img src="img/user-avatar.jpg" class="img-fluid" alt="img"></div></td><td><span class="badge badge-primary ml-3 mt-3 pointer border-0 font-weight-normal position-absolute"><i class="fas fa-trash"></i></span></td></tr>');
 		});
 		$(".remove-speaker").on("click", function(){
 			$(this).parents("tr").remove();
@@ -103,15 +103,15 @@ $(document).ready(function(){
 	if($(".event-calendar").length) {
 		$(".event-calendar .calendar:not(.month)").hide();
 		$(".calendar-nav button.show-days").on("click", function(){
-			$(this).addclassName("btn-primary text-white").siblings("button").removeclassName("btn-primary text-white");
+			$(this).addclass("btn-primary text-white").siblings("button").removeclass("btn-primary text-white");
 			$(".event-calendar .calendar.day").show().siblings(".calendar").hide();
 		})
 		$(".calendar-nav button.show-week").on("click", function(){
-			$(this).addclassName("btn-primary text-white").siblings("button").removeclassName("btn-primary text-white");
+			$(this).addclass("btn-primary text-white").siblings("button").removeclass("btn-primary text-white");
 			$(".event-calendar .calendar.week").show().siblings(".calendar").hide();
 		})
 		$(".calendar-nav button.show-month").on("click", function(){
-			$(this).addclassName("btn-primary text-white").siblings("button").removeclassName("btn-primary text-white");
+			$(this).addclass("btn-primary text-white").siblings("button").removeclass("btn-primary text-white");
 			$(".event-calendar .calendar.month").show().siblings(".calendar").hide();
 		})
 	}
@@ -134,10 +134,10 @@ $(document).ready(function(){
 		$(window).bind('scroll', function() {
 			var navHeight = $( window ).height() - 70;
 			if ($(window).scrollTop() > navHeight) {
-				$('.scroll-tabs').addclassName('fixed shadow');
+				$('.scroll-tabs').addclass('fixed shadow');
 			}
 			else {
-				$('.scroll-tabs').removeclassName('fixed shadow');
+				$('.scroll-tabs').removeclass('fixed shadow');
 			}
 		});
 	}
@@ -147,7 +147,7 @@ $(document).ready(function(){
 	//-------------------------------
 	$(document).on('click', 'a[href^="#"]', function (event) {
 		event.preventDefault();
-		$(this).addclassName("active").siblings().removeclassName("active");
+		$(this).addclass("active").siblings().removeclass("active");
 		$('html, body').animate({
 			scrollTop: $($.attr(this, 'href')).offset().top-75
 		}, 500);
@@ -157,12 +157,12 @@ $(document).ready(function(){
 	// Switch Galleries
 	//-------------------------------
 	if($("#et-big-gallery").length){
-		$('.big-gallery > div[className^="gallery-1"]').show();
+		$('.big-gallery > div[class^="gallery-1"]').show();
 		$(document).on('click', 'div[id^="gallery-"]', function (event) {
 			event.preventDefault();
 			var ID = $(this).attr("id");
 			var gallery = $("div." + ID);
-			$(gallery).show().siblings('div[className^="gallery-"]').hide();
+			$(gallery).show().siblings('div[class^="gallery-"]').hide();
 		});
 	}
 	
@@ -170,12 +170,12 @@ $(document).ready(function(){
 	// Switch Galleries
 	//-------------------------------
 	if($("#et-big-gallery-2").length){
-		$('.big-gallery > div[className^="gallery-1"]').show();
+		$('.big-gallery > div[class^="gallery-1"]').show();
 		$(document).on('click', 'div[id^="gallery-"]', function (event) {
 			event.preventDefault();
 			var ID = $(this).attr("id");
 			var gallery = $("div." + ID);
-			$(gallery).show().siblings('div[className^="gallery-"]').hide();
+			$(gallery).show().siblings('div[class^="gallery-"]').hide();
 		});
 	}
 
@@ -183,12 +183,12 @@ $(document).ready(function(){
 	// Switch Galleries
 	//-------------------------------
 	if($("#et-big-gallery-2").length){
-		$('.big-gallery > div[className^="gallery-1"]').show();
+		$('.big-gallery > div[class^="gallery-1"]').show();
 		$(document).on('click', 'div[id^="gallery-"]', function (event) {
 			event.preventDefault();
 			var ID = $(this).attr("id");
-			var gallery = $(".big-gallery > div").attr("className") == ID;
-			console.log($(".big-gallery > div").attr("className") == ID);
+			var gallery = $(".big-gallery > div").attr("class") == ID;
+			console.log($(".big-gallery > div").attr("class") == ID);
 			$(gallery).show();
 		});
 	}
@@ -467,16 +467,16 @@ $(document).ready(function(){
 			// Now highlight all the stars that's not after the current hovered star
 			$(this).parent().children('li.star').each(function(e){
 				if (e < onStar) {
-					$(this).addclassName('hover');
+					$(this).addclass('hover');
 				}
 				else {
-					$(this).removeclassName('hover');
+					$(this).removeclass('hover');
 				}
 			});
 
 		}).on('mouseout', function(){
 			$(this).parent().children('li.star').each(function(e){
-				$(this).removeclassName('hover');
+				$(this).removeclass('hover');
 			});
 		});
 
@@ -486,11 +486,11 @@ $(document).ready(function(){
 			var stars = $(this).parent().children('li.star');
 
 			for (i = 0; i < stars.length; i++) {
-				$(stars[i]).removeclassName('selected');
+				$(stars[i]).removeclass('selected');
 			}
 
 			for (i = 0; i < onStar; i++) {
-				$(stars[i]).addclassName('selected');
+				$(stars[i]).addclass('selected');
 			}
 
 			// JUST RESPONSE (Not needed)
@@ -525,8 +525,8 @@ $(document).ready(function(){
 
 		Array.prototype.slice.call(divs).forEach(function (el) {
 			el.addEventListener('click', function () {
-				this.classNameList.toggle('show');
-				body.classNameList.toggle('gallery-active');
+				this.classList.toggle('show');
+				body.classList.toggle('gallery-active');
 				checkNext();
 				checkPrev();
 			});
@@ -538,8 +538,8 @@ $(document).ready(function(){
 			event.initEvent('click', true, false);
 
 			show.previousElementSibling.dispatchEvent(event);
-			show.classNameList.remove('show');
-			body.classNameList.toggle('gallery-active');
+			show.classList.remove('show');
+			body.classList.toggle('gallery-active');
 			checkNext();
 		});
 
@@ -549,8 +549,8 @@ $(document).ready(function(){
 			event.initEvent('click', true, false);
 
 			show.nextElementSibling.dispatchEvent(event);
-			show.classNameList.remove('show');
-			body.classNameList.toggle('gallery-active');
+			show.classList.remove('show');
+			body.classList.toggle('gallery-active');
 			checkPrev();
 		});
 
@@ -571,7 +571,7 @@ $(document).ready(function(){
 	//-------------------------------
 	if($(".price-plans").length) {
 		$(".price-plans .price-plan").on('click', function(){
-			$(this).addclassName("active").siblings().removeclassName("active");
+			$(this).addclass("active").siblings().removeclass("active");
 		})
 	}
 
@@ -623,7 +623,7 @@ function loadMap(singleMap) {
 		];
 
 		var listingContents =   [
-			'<div className="listing-map-window"><img src="img/popular-event-1.jpg" className="mb-3 w-100" alt="img"><div className="pl-1"><h6>Annual Food Festival</h6><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><span className="badge badge-primary mr-3">Running</span><a className="w-100 text-primary" href="#">View Details <i className="fas fa-angle-double-right"></i></a></div></div>',
+			'<div class="listing-map-window"><img src="img/popular-event-1.jpg" class="mb-3 w-100" alt="img"><div class="pl-1"><h6>Annual Food Festival</h6><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><span class="badge badge-primary mr-3">Running</span><a class="w-100 text-primary" href="#">View Details <i class="fas fa-angle-double-right"></i></a></div></div>',
 		]
 	} else {
 
@@ -655,7 +655,7 @@ function loadMap(singleMap) {
 		];
 
 		var listingContents =   [
-			'<div className="listing-map-window"><img src="img/popular-event-1.jpg" className="mb-3 w-100" alt="img"><div className="pl-1"><h6>Annual Food Festival</h6><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><span className="badge badge-primary mr-3">Running</span><a className="w-100 text-primary" href="#">View Details <i className="fas fa-angle-double-right"></i></a></div></div>',
+			'<div class="listing-map-window"><img src="img/popular-event-1.jpg" class="mb-3 w-100" alt="img"><div class="pl-1"><h6>Annual Food Festival</h6><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><span class="badge badge-primary mr-3">Running</span><a class="w-100 text-primary" href="#">View Details <i class="fas fa-angle-double-right"></i></a></div></div>',
 		]
 	}
 

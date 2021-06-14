@@ -47,17 +47,17 @@ const Events = (props) => {
 
             <Banner />
             
-            <section id="et-latest-news" className="container-fluid" style={{ marginTop: "-20px" }}>
+            <section id="et-latest-news" class="container-fluid" style={{ marginTop: "-20px" }}>
 
-                <div className="container">
+                <div class="container">
 
-                    <h3 className="mb-0">All Events</h3>
+                    <h3 class="mb-0">All Events</h3>
 
 
                     {
                         loading ?
 
-                            <div className="row">
+                            <div class="row">
 
                                  {
                                      sampleData.map( data => (
@@ -69,7 +69,7 @@ const Events = (props) => {
                              
                         :
                         <>
-                            <div className="row">
+                            <div class="row">
 
                                 {
                                     events && events.docs.length > 0
@@ -90,15 +90,15 @@ const Events = (props) => {
                             {
                                  events &&
 
-                                    <div className="owl-nav">
+                                    <div class="owl-nav">
 
-                                        <button onClick={ () => handleEventNavigation(events.prevPage) } type="button" role="presentation" className="owl-prev" disabled={!events.hasPrevPage}>
+                                        <button onClick={ () => handleEventNavigation(events.prevPage) } type="button" role="presentation" class="owl-prev" disabled={!events.hasPrevPage}>
         
                                             <span aria-label="Previous">‹</span>
         
                                         </button>
         
-                                        <button onClick={ () => handleEventNavigation(events.nextPage) } type="button" role="presentation" className="owl-next" disabled={!events.hasNextPage}>
+                                        <button onClick={ () => handleEventNavigation(events.nextPage) } type="button" role="presentation" class="owl-next" disabled={!events.hasNextPage}>
         
                                             <span aria-label="Next">›</span>
         

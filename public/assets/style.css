@@ -1985,7 +1985,7 @@ section#et-notfound{
 .big-gallery button.owl-prev, .big-gallery button.owl-next{
   margin: 10px 10px 15px;
 }
-.big-gallery > div[className^="gallery-"]{
+.big-gallery > div[class^="gallery-"]{
   display: none;
 }
 
